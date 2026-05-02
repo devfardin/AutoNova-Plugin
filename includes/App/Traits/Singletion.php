@@ -1,5 +1,4 @@
-<?php 
-
+<?php
 namespace Fardin\Autonova\App\Traits;
 if(!defined("ABSPATH")){
     exit;

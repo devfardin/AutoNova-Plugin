@@ -1,7 +1,5 @@
 <?php
-
 namespace Fardin\Autonova;
-
 use Elementor\Core\Page_Assets\Loader;
 
 if (!defined('ABSPATH')) {
@@ -22,10 +20,10 @@ class Autonova
 
     public function define_constants()
     {
-        define('ELE_ADDMIN_VERSION', '1.0.0');
-        define('ELE_ADDONS_PATH', plugin_dir_path(__DIR__));
-        define('ELE_ADDONS_URL', plugin_dir_url(__DIR__));
-        define('ELE_ADDONS_TEXT_DOMAIN', load_plugin_textdomain('autonova', false, dirname(plugin_basename(__FILE__)) . '/languages'));
+        define('AUTONOVA_PLUGIN_VERSION', '1.0.0');
+        define('AUTONOVA_PLUGIN_PATH', plugin_dir_path(__DIR__));
+        define('AUTONOVA_PLUGIN_URL', plugin_dir_url(__DIR__));
+        define('AUTONOVA_PLUGIN_TEXT_DOMAIN', load_plugin_textdomain('autonova', false, dirname(plugin_basename(__FILE__)) . '/languages'));
     }
 
     public function init_plugin()
@@ -37,6 +35,7 @@ class Autonova
     {
         //    App\Widgets\Base::instance()->init();
         Widgets\Base::instance()->init();
+        Features\Base::instance()->init();
     }
 
     public function init_hooks()

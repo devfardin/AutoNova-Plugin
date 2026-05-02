@@ -7,7 +7,7 @@
  * Author: Fardin Ahmed
  * Author URI: https://github.com/devfardin
  * Text Domain: autonova
- * Requires Plugins: autonova
+ * Requires Plugins: elementor
  */
 
 namespace Fardin\Autonova;
