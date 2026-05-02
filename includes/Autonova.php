@@ -34,6 +34,7 @@ class Autonova
     public function includes()
     {
         //    App\Widgets\Base::instance()->init();
+        Admin\Base::instance()->init();
         Widgets\Base::instance()->init();
         Features\Base::instance()->init();
     }

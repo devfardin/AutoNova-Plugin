@@ -1,36 +1,3 @@
-.whatsapp-float {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    z-index: 9999;
-}
-
-.whatsapp-float a {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: #25d366;
-    color: #fff;
-    padding: 12px 20px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
-
- .ele_addons_advance_button{
- background: var(--e-global-color-primary);
- }
- .ele_addons_advance_button_wrapper{
-    display: flex;
-    gap: 5px;
-    align-items: center;
-   
- }
-
- .ele_addons_advance_button .ele_addons_icon_wrapper svg {
-    width: 20px !important;
-    height: auto;
-}
-
-
+/* body main#inner-wrap, footer {
+    background: black !important;
+} */
