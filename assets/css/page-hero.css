@@ -1,0 +1,105 @@
+/* ===== Custom Page Hero ===== */
+.custom-page-header {
+    position: relative;
+    overflow: hidden;
+}
+
+.header-content-wrapper {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+}
+
+/* Overlay */
+.custom-page-header .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(10, 20, 40, 0.82) 0%, rgba(180, 30, 30, 0.55) 100%);
+    z-index: 1;
+}
+
+.header-content-wrapper .autonova-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.header-content {
+    padding: 80px 0 60px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Subtitle */
+.custom-page-subtitle {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--e-global-color-primary);
+    margin: 0 !important;
+}
+
+.custom-page-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.15;
+    color: #fff;
+}
+@media only screen and (min-width:992px){
+    .custom-page-title {
+    font-size: 72px;
+    font-weight: 900;
+}
+}
+@media only screen and (min-width:768px){
+    .custom-page-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+}
+}
+
+/* Description */
+.custom-page-description {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 560px;
+    line-height: 1.7;
+}
+
+/* Breadcrumb */
+.header-content .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.header-content .breadcrumb a {
+    color: #e8b84b;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.header-content .breadcrumb a:hover {
+    color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header-content-wrapper {
+        min-height: 300px;
+    }
+
+    .header-content {
+        padding: 60px 0 40px;
+    }
+}

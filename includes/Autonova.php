@@ -10,8 +10,6 @@ class Autonova
 {
     use \Fardin\Autonova\App\Traits\Singletion;
 
-
-
     public function init()
     {
         $this->define_constants();
@@ -34,9 +32,10 @@ class Autonova
     public function includes()
     {
         //    App\Widgets\Base::instance()->init();
-        Admin\Base::instance()->init();
-        Widgets\Base::instance()->init();
-        Features\Base::instance()->init();
+        Admin\AdminBase::instance()->init();
+        Widgets\WidgetsBase::instance()->init();
+        Features\FeaturesBase::instance()->init();
+        Frontend\FrontendBase::instance()->init();
     }
 
     public function init_hooks()
