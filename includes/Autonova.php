@@ -28,6 +28,7 @@ class Autonova
     {
         $this->includes();
         $this->init_hooks();
+        
     }
     public function includes()
     {
@@ -36,6 +37,7 @@ class Autonova
         Widgets\WidgetsBase::instance()->init();
         Features\FeaturesBase::instance()->init();
         Frontend\FrontendBase::instance()->init();
+        Shortcodes\ShortcodesBase::instance()->init();
     }
 
     public function init_hooks()

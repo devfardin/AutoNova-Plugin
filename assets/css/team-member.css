@@ -1,0 +1,90 @@
+.team-member_wrapper .team-member__grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: space-between;
+    gap: 30px;
+}
+
+@media only screen and (min-width: 768px) {
+    .team-member_wrapper .team-member__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .team-member_wrapper .team-member__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.team-member_wrapper .team-member__thumb {
+    position: relative;
+    overflow: hidden;
+}
+
+.team-member_wrapper .team-member__card:hover .team-member__thumb img {
+    transform: scale(1.05);
+}
+
+.team-member_wrapper .team-member__thumb img {
+    width: 100%;
+    height: 22rem;
+    object-fit: cover;
+    object-position: top;
+    transition: transform 0.7s;
+    transition: transform 0.7s ease;
+    overflow: hidden;
+}
+
+.team-member_wrapper .team-member__thumb .team-member__gradient {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.8),
+            transparent,
+            transparent);
+}
+
+.team-member_wrapper .team-member__info {
+    position: absolute;
+    padding: 24px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.team-member_wrapper .divider {
+    width: 40px;
+    height: 1px;
+    background: var(--e-global-color-primary);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.team-member_wrapper .team-member__name {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: "Montserrat", Sans-serif;
+    margin: 0;
+    color: var(--e-global-color-heading);
+}
+
+.team-member_wrapper .team-member__role {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--e-global-color-primary);
+    letter-spacing: .05em;
+}
+.team-member_wrapper .team-member__content{
+    margin-top: 5px;
+}
+.team-member_wrapper .team-member__content p{
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--e-global-color-text);
+    line-height: 1.5rem;
+}

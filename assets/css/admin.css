@@ -1,10 +1,16 @@
 
 /* Admin page whatapp setting */
+.autonova-card-wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    gap: 20px;
+}
+
 .autonova-card {
     background: #fff;
     border-radius: 12px;
     box-shadow: 0 2px 12px rgba(0, 0, 0, .08);
-    max-width: 600px;
     padding: 32px 36px;
     margin-top: 24px;
 }

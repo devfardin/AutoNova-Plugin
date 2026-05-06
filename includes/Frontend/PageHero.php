@@ -30,30 +30,30 @@ class PageHero
                     <div class="header-content">
                         <?php if ($subtitle): ?>
                             <div class="sub-heading-wrapper">
-                            <span class="divider"></span>
+                                <span class="divider"></span>
                                 <p class="custom-page-subtitle"> <?php echo esc_html($subtitle) ?> </p>
                                 <span class="divider"></span>
                             </div>
-                    <?php endif; ?>
-                    <?php if ($title): ?>
-                        <h1 class="custom-page-title"> <?php echo esc_html($title) ?> </h1>
-                    <?php endif; ?>
-                    <?php if ($description): ?>
-                        <p class="custom-page-description"> <?php echo esc_html($description) ?> </p>
-                    <?php endif; ?>
+                        <?php endif; ?>
 
+                        <?php if ($title): ?>
+                            <h1 class="custom-page-title"> <?php echo esc_html($title) ?> </h1>
+                        <?php endif; ?>
+                        <?php if ($description): ?>
+                            <p class="custom-page-description"> <?php echo esc_html($description) ?> </p>
+                        <?php endif; ?>
 
-                    <!-- header breadcome -->
-                    <div class="breadcrumb">
-                        <span><a href="/">Home</a></span>
-                        <span> / </span>
-                        <span><?php echo esc_html(get_the_title()) ?></span>
+                        <!-- header breadcome -->
+                        <div class="breadcrumb">
+                            <span><a href="/">Home</a></span>
+                            <span> / </span>
+                            <span><?php echo esc_html(get_the_title()) ?></span>
+                        </div>
+
                     </div>
 
                 </div>
-
             </div>
-        </div>
         </div>
 
         <?php

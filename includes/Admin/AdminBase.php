@@ -64,6 +64,8 @@ class AdminBase
     {
         PageHeroSettings::instance();
         AdminEnqueue::instance()->init();
+        TeamSettings::instance()->init();
+        AdminPage::instance()->init();
     }
 
 }
