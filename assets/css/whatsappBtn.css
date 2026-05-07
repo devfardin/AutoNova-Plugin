@@ -7,12 +7,19 @@
     background-color: #25D366;
     color: #ffffff;
     font-weight: 700;
-    font-size: 0.875rem;
+    font-size: 0.775rem;
     letter-spacing: 0.15em;
-    padding: 16px 30px;
+    padding: 12px 25px;
     width: 100%;
     cursor: pointer;
     transition: all 0.3s ease;
+}
+
+@media only screen and (min-width:768px) {
+    .autonova_whatsapp_button_container .autonova_whatsapp_button {
+        padding: 14px 30px;
+        font-size: 0.800rem;
+    }
 }
 
 .autonova_whatsapp_button_container .autonova_whatsapp_button:hover {
