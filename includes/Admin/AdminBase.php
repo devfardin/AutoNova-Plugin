@@ -66,6 +66,7 @@ class AdminBase
         AdminEnqueue::instance()->init();
         TeamSettings::instance()->init();
         AdminPage::instance()->init();
+        FAQSettings::instance()->init();
     }
 
 }
