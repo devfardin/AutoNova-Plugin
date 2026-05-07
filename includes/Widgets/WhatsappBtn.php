@@ -6,7 +6,6 @@ if (!defined("ABSPATH")) {
 }
 use \Elementor\Controls_Manager;
 use \Elementor\Widget_Base;
-use \Elementor\Icons_Manager;
 
 class WhatsappBtn extends Widget_Base
 {
@@ -52,7 +51,7 @@ class WhatsappBtn extends Widget_Base
 		$this->start_controls_section(
 			'section_title',
 			[
-				'label' => esc_html__('Advance Button ', AUTONOVA_PLUGIN_TEXT_DOMAIN),
+				'label' => esc_html__('Whatsapp Button ', AUTONOVA_PLUGIN_TEXT_DOMAIN),
 				'tab' => Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -91,6 +90,9 @@ class WhatsappBtn extends Widget_Base
 		// Style Tab End
 	}
 
+	public function get_style_depends(): array {
+		return [ 'autonova_whatsapp'];
+	}
 	protected function render(): void
 	{
 		$settings = $this->get_settings_for_display();

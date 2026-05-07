@@ -46,6 +46,7 @@ class FrontendEnqueue
             'all'
         );
 
+
         // Page style
         if (is_page('about-us')) {
             wp_enqueue_style(

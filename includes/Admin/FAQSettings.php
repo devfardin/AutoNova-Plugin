@@ -43,12 +43,14 @@ class FAQSettings
                                 'label' => 'Question',
                                 'name' => 'faq_question',
                                 'type' => 'text',
+                                'required' => 1,
                             ],
                             [
                                 'key' => 'field_faq_answear',
                                 'label' => 'Answear',
                                 'name' => 'faq_answear',
                                 'type' => 'textarea',
+                                'required' => 1,
                             ],
                         ]
                     ]
