@@ -16,5 +16,6 @@ class ShortcodesBase
     public function load_dep(){
        TeamMember::instance()->init();
        FeatureCars::instance()->init();
+       CarsInventory::instance()->init();
     }
 }

@@ -17,7 +17,7 @@ class FeatureCars
         $args = array(
             'post_type' => 'car',
             'post_status' => 'publish',
-            'posts_per_page' => 6,
+            'posts_per_page' => 3,
         );
         $query = new \WP_Query($args);
         if (!$query->have_posts()) {
