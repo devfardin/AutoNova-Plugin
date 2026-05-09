@@ -201,12 +201,21 @@
     margin-bottom: 24px;
     padding: 24px;
     position: sticky;
-    top: 92px;
+    top: 45px;
     z-index: 40;
-    background-color: rgba(10, 10, 10, 0.95); /* bg-[#0A0A0A]/95 */
-    backdrop-filter: blur(12px); /* backdrop-blur-md */
+    background-color: rgba(10, 10, 10, 0.95);
+    /* bg-[#0A0A0A]/95 */
+    backdrop-filter: blur(12px);
+    /* backdrop-blur-md */
     -webkit-backdrop-filter: blur(12px);
-    border-bottom: 2px solid rgba(237, 125, 55, 0.3); /* border-[#ed7d37]/30 */
+    border-bottom: 2px solid rgba(237, 125, 55, 0.3);
+    /* border-[#ed7d37]/30 */
+}
+
+@media only screen and (min-width:768px) {
+    .feature-cars__filter {
+        top: 92px;
+    }
 }
 
 .feature-cars__select-wrap {

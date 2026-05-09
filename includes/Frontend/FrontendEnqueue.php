@@ -64,6 +64,16 @@ class FrontendEnqueue
                 'all'
             );
         }
+        // Page style
+        if (is_page('services')) {
+            wp_enqueue_style(
+                'autonova-services-page-style',
+                AUTONOVA_PLUGIN_URL . './assets/css/services.css',
+                [],
+                AUTONOVA_PLUGIN_VERSION,
+                'all'
+            );
+        }
 
 
 
