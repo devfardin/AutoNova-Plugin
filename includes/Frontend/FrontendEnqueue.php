@@ -28,8 +28,8 @@ class FrontendEnqueue
             [],
             AUTONOVA_PLUGIN_VERSION,
             'all'
-        ); 
-        
+        );
+
         wp_enqueue_style(
             'autonova-theme-style',
             AUTONOVA_PLUGIN_URL . './assets/css/theme.css',
@@ -46,6 +46,13 @@ class FrontendEnqueue
             'all'
         );
 
+        wp_register_style(
+            'autonova-featue-car',
+            AUTONOVA_PLUGIN_URL . './assets/css/feature-car.css',
+            [],
+            AUTONOVA_PLUGIN_VERSION,
+            'all'
+        );
 
         // Page style
         if (is_page('about-us')) {

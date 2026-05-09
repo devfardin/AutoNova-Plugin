@@ -67,6 +67,7 @@ class AdminBase
         TeamSettings::instance()->init();
         AdminPage::instance()->init();
         FAQSettings::instance()->init();
+        Customize::instance()->init();
     }
 
 }
