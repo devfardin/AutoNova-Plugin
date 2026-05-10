@@ -57,6 +57,19 @@ class WhatsappBtn extends Widget_Base
 		);
 
 		$this->add_control(
+			'button_style',
+			[
+				'label' => esc_html__('Style', AUTONOVA_PLUGIN_TEXT_DOMAIN),
+				'type' => Controls_Manager::SELECT,
+				'default' => 'filled',
+				'options' => [
+					'filled'  => esc_html__('Filled', AUTONOVA_PLUGIN_TEXT_DOMAIN),
+					'outline' => esc_html__('Outline', AUTONOVA_PLUGIN_TEXT_DOMAIN),
+				],
+			]
+		);
+
+		$this->add_control(
 			'button_text',
 			[
 				'label' => esc_html__('Text', AUTONOVA_PLUGIN_TEXT_DOMAIN),
@@ -106,7 +119,7 @@ class WhatsappBtn extends Widget_Base
 
 		?>
 		<div class="autonova_whatsapp_button_container">
-			<a href="https://wa.me/<?php echo esc_attr($whatsapp_number); ?>?text=<?php echo $message; ?>" target="_blank" class="autonova_whatsapp_button">
+			<a href="<?php echo esc_url('https://wa.me/' . $whatsapp_number . '?text=' . $message); ?>" target="_blank" class="autonova_whatsapp_button autonova_whatsapp_button--<?php echo esc_attr($settings['button_style']); ?>">
 				
 					<span class="autonova_whatsapp_button_icon_wrapper">
 						<svg width="20" height="20" viewBox="0 0 24 24" fill="#fff">
@@ -115,7 +128,7 @@ class WhatsappBtn extends Widget_Base
 						</svg>
 					</span>
 					<span>
-						<?php echo $settings['button_text']; ?>
+						<?php echo esc_html($settings['button_text']); ?>
 					</span>
 			</a>
 		</div>

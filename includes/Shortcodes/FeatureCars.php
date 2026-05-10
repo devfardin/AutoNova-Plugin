@@ -90,7 +90,8 @@ class FeatureCars
                                 </div>
                             </div>
                         </div>
-                    <?php endwhile; ?>
+                    <?php endwhile;
+                    wp_reset_postdata(); ?>
                 </div>
                 <div class="feature-cars__cta">
                     <a href="<?php echo esc_url(site_url('/inventory')); ?>">
@@ -103,8 +104,6 @@ class FeatureCars
                     </a>
                 </div>
             </div>
-
-
         <?php endif;
         return ob_get_clean();
     }

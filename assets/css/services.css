@@ -35,8 +35,8 @@
     color: rgba(237, 125, 55, 0.2);
     font-weight: 900;
     font-size: 6rem; 
-    line-height: 1; 
-    margin-bottom: 1rem;
+    /* line-height: 1; 
+    margin-bottom: 1rem; */
     user-select: none;
     -webkit-user-select: none;
     font-family: "Montserrat", Sans-serif;

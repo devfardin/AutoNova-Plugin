@@ -119,9 +119,10 @@ header {
 }
 
 /* Form Style */
- #fluentform_1{
+#fluentform_1 {
     margin: 0 !important;
 }
+
 .ff-form-loaded label {
     font-size: 13px;
     font-weight: 400;
@@ -146,10 +147,12 @@ header {
     transition: border-color 0.3s;
     border-radius: 0;
 }
-.ff-default .ff-el-form-control:focus{
-border-color: var(--e-global-color-primary);
+
+.ff-default .ff-el-form-control:focus {
+    border-color: var(--e-global-color-primary);
     background: transparent;
 }
+
 .fluentform .ff-form-loaded input:focus {
     border-color: var(--e-global-color-primary);
     background: transparent;
@@ -178,6 +181,7 @@ button.ff-btn.ff-btn-submit.ff-btn-md {
 button.ff-btn.ff-btn-submit.ff-btn-md:hover {
     background: var(--e-global-color-primary-hover);
 }
+
 #fluentform_1_success {
     border: 1px solid var(--e-global-color-primary-hover);
     color: white;
@@ -203,4 +207,16 @@ button.ff-btn.ff-btn-submit.ff-btn-md:hover {
     white-space: nowrap;
     flex-shrink: 0;
     margin: 0 !important;
+}
+
+/* Home page style */
+
+.testimonials_card {
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(4px);
+    transition: all 500ms;
+}
+.elementor-image-box-wrapper {
+    display: flex;
+    gap: 20px
 }

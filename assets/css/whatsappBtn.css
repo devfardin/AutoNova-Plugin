@@ -25,3 +25,23 @@
 .autonova_whatsapp_button_container .autonova_whatsapp_button:hover {
     background-color: #1ebe5d;
 }
+
+/* Outline style */
+.autonova_whatsapp_button_container .autonova_whatsapp_button--outline {
+    background-color: transparent;
+    color: #25D366;
+    border: 2px solid #25D366;
+}
+
+.autonova_whatsapp_button_container .autonova_whatsapp_button--outline svg path {
+    fill: #25D366;
+}
+
+.autonova_whatsapp_button_container .autonova_whatsapp_button--outline:hover {
+    background-color: #25D366;
+    color: #ffffff;
+}
+
+.autonova_whatsapp_button_container .autonova_whatsapp_button--outline:hover svg path {
+    fill: #ffffff;
+}

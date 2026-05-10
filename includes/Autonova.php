@@ -43,6 +43,7 @@ class Autonova
     public function init_hooks()
     {
         load_plugin_textdomain('autonova', false, dirname(plugin_basename(__FILE__)) . '/languages');
+        add_filter('elementor/utils/is_post_support_the_content', '__return_false');
     }
 
 
