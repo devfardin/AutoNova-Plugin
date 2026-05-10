@@ -1,0 +1,23 @@
+<?php
+namespace Fardin\Autonova\Templates;
+if (!defined('ABSPATH')) {
+    exit;
+}
+class TemplatesBase
+{
+    use \Fardin\Autonova\App\Traits\Singletion;
+    public function init()
+    {
+        add_filter('single_template', [$this, 'load_plugin_single_template']);
+    }
+
+    public function load_plugin_single_template(string $single_template): string
+    {
+        global $post;
+
+        $file = plugin_dir_path(__FILE__) . 'single-' . $post->post_type . '.php';
+
+        return file_exists($file) ? $file : $single_template;
+    }
+
+}

@@ -21,6 +21,3 @@
 .Our_core_values .elementor-element{
     transition: all 0.3s;
 }
-.Our_core_values .elementor-element:hover .elementor-icon {
-    border-color: var(--e-global-color-primary) !important;
-}

@@ -225,3 +225,9 @@ button.ff-btn.ff-btn-submit.ff-btn-md:hover {
     display: flex;
     gap: 20px
 }
+
+/* Global Style */
+
+.Our_core_values .elementor-element:hover .elementor-icon {
+    border-color: var(--e-global-color-primary) !important;
+}

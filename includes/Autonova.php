@@ -38,6 +38,7 @@ class Autonova
         Features\FeaturesBase::instance()->init();
         Frontend\FrontendBase::instance()->init();
         Shortcodes\ShortcodesBase::instance()->init();
+        Templates\TemplatesBase::instance()->init();
     }
 
     public function init_hooks()
