@@ -7,7 +7,7 @@
     position: relative;
     z-index: 1;
 }
-.image-border::before {
+.image-border-left::before {
     content: "";
     position: absolute;
     top: -1rem;
@@ -18,13 +18,26 @@
     pointer-events: none;
     z-index: 0;
 }
+
+.image-border-right::before {
+    content: "";
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(237, 125, 55, 0.2);
+    pointer-events: none;
+    z-index: 0;
+}
+
 .elementor-element .pleaseholder_text h2 {
     color: rgba(237, 125, 55, 0.2);
     font-weight: 900;
     font-size: 6rem; 
     line-height: 1; 
-    margin-bottom: 1rem; /* mb-4 */
-    user-select: none; /* select-none */
+    margin-bottom: 1rem;
+    user-select: none;
     -webkit-user-select: none;
     font-family: "Montserrat", Sans-serif;
 }

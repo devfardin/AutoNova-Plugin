@@ -184,3 +184,23 @@ button.ff-btn.ff-btn-submit.ff-btn-md:hover {
     font-size: 16px;
     text-align: center;
 }
+
+/* Text Divider Widget */
+.autonova_divider_container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    align-items: center;
+}
+
+.autonova_divider_line {
+    flex: 1;
+    border-top: 1px solid #000000;
+}
+
+.autonova_divider_text {
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin: 0 !important;
+}

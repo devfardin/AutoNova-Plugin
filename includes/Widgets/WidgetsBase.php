@@ -23,6 +23,7 @@ class WidgetsBase
         $widgets_manager->register(BasicWidget::instance());
         $widgets_manager->register(WhatsappBtn::instance());
         $widgets_manager->register(Faq::instance());
+        $widgets_manager->register(TextDivider::instance());
     }
     public function register_scripts()
     {
