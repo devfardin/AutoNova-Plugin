@@ -68,7 +68,7 @@ class TextDivider extends Widget_Base
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'divider_layout',
             [
                 'label' => esc_html__('Divider Side', AUTONOVA_PLUGIN_TEXT_DOMAIN),
@@ -99,19 +99,19 @@ class TextDivider extends Widget_Base
                 'type' => Controls_Manager::SELECT,
                 'default' => 'span',
                 'options' => [
-                    'h1'   => 'H1',
-                    'h2'   => 'H2',
-                    'h3'   => 'H3',
-                    'h4'   => 'H4',
-                    'h5'   => 'H5',
-                    'h6'   => 'H6',
-                    'p'    => 'P',
+                    'h1' => 'H1',
+                    'h2' => 'H2',
+                    'h3' => 'H3',
+                    'h4' => 'H4',
+                    'h5' => 'H5',
+                    'h6' => 'H6',
+                    'p' => 'P',
                     'span' => 'Span',
                 ],
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'text_align',
             [
                 'label' => esc_html__('Alignment', AUTONOVA_PLUGIN_TEXT_DOMAIN),
@@ -133,6 +133,28 @@ class TextDivider extends Widget_Base
                 'default' => 'center',
                 'selectors' => [
                     '{{WRAPPER}} .autonova_divider_container' => 'justify-content: {{VALUE}};',
+                ],
+            ]
+        );
+
+        $this->add_responsive_control(
+            'container_padding',
+            [
+                'label' => esc_html__('Divider Y Space', AUTONOVA_PLUGIN_TEXT_DOMAIN),
+                'type' => Controls_Manager::SLIDER,
+                'size_units' => ['px'],
+                'range' => [
+                    'px' => [
+                        'min' => 1,
+                        'step' => 1,
+                    ],
+                ],
+                'default' => [
+                    'unit' => 'px',
+                    'size' => 15,
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .autonova_divider_container' => 'padding-top: {{SIZE}}{{UNIT}}; padding-bottom: {{SIZE}}{{UNIT}}',
                 ],
             ]
         );
@@ -189,7 +211,7 @@ class TextDivider extends Widget_Base
                 'type' => Controls_Manager::SELECT,
                 'default' => 'solid',
                 'options' => [
-                    'solid'  => esc_html__('Solid', AUTONOVA_PLUGIN_TEXT_DOMAIN),
+                    'solid' => esc_html__('Solid', AUTONOVA_PLUGIN_TEXT_DOMAIN),
                     'dashed' => esc_html__('Dashed', AUTONOVA_PLUGIN_TEXT_DOMAIN),
                     'dotted' => esc_html__('Dotted', AUTONOVA_PLUGIN_TEXT_DOMAIN),
                     'double' => esc_html__('Double', AUTONOVA_PLUGIN_TEXT_DOMAIN),
@@ -212,7 +234,7 @@ class TextDivider extends Widget_Base
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'divider_height',
             [
                 'label' => esc_html__('Divider Weight', AUTONOVA_PLUGIN_TEXT_DOMAIN),
@@ -235,7 +257,7 @@ class TextDivider extends Widget_Base
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'divider_width',
             [
                 'label' => esc_html__('Divider Width', AUTONOVA_PLUGIN_TEXT_DOMAIN),
@@ -260,10 +282,11 @@ class TextDivider extends Widget_Base
                     '{{WRAPPER}} .autonova_divider_line' => 'flex: 0 0 {{SIZE}}{{UNIT}};',
                 ],
                 'description' => esc_html__('Leave empty to auto-fill available space.', AUTONOVA_PLUGIN_TEXT_DOMAIN),
+                
             ]
         );
 
-        $this->add_control(
+        $this->add_responsive_control(
             'divider_space',
             [
                 'label' => esc_html__('Text Spacing', AUTONOVA_PLUGIN_TEXT_DOMAIN),
@@ -301,11 +324,12 @@ class TextDivider extends Widget_Base
         ?>
 
         <div class="autonova_divider_container">
-            <?php if ( in_array( $settings['divider_layout'], ['both', 'left'] ) ) : ?>
+            <?php if (in_array($settings['divider_layout'], ['both', 'left'])): ?>
                 <span class="autonova_divider_line"></span>
             <?php endif; ?>
-            <<?php echo esc_attr($settings['text_tag']); ?> class="autonova_divider_text"><?php echo wp_kses_post($settings['divider_text']); ?></<?php echo esc_attr($settings['text_tag']); ?>>
-            <?php if ( in_array( $settings['divider_layout'], ['both', 'right'] ) ) : ?>
+            <<?php echo esc_attr($settings['text_tag']); ?>
+                class="autonova_divider_text"><?php echo wp_kses_post($settings['divider_text']); ?></<?php echo esc_attr($settings['text_tag']); ?>>
+            <?php if (in_array($settings['divider_layout'], ['both', 'right'])): ?>
                 <span class="autonova_divider_line"></span>
             <?php endif; ?>
         </div>
