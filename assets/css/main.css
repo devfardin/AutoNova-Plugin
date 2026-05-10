@@ -1,7 +1,12 @@
 body main#inner-wrap,
-footer,
-header {
+footer {
     background: black !important;
+}
+
+/* Header style */
+
+.site-main-header-inner-wrap.site-header-row.site-header-row-has-sides.site-header-row-center-column {
+    transition: all 0.5s;
 }
 
 * {
