@@ -19,7 +19,7 @@ class AdminEnqueue
 
         wp_enqueue_style(
             'autonova-admin-style',
-            AUTONOVA_PLUGIN_URL . './assets/css/admin.css',
+            AUTONOVA_PLUGIN_URL . 'assets/css/admin.css',
             [],
             AUTONOVA_PLUGIN_VERSION,
             'all'

@@ -16,7 +16,7 @@ class FrontendEnqueue
     {
         wp_enqueue_style(
             'autonova-global-page-header-style',
-            AUTONOVA_PLUGIN_URL . './assets/css/page-hero.css',
+            AUTONOVA_PLUGIN_URL . 'assets/css/page-hero.css',
             [],
             AUTONOVA_PLUGIN_VERSION,
             'all'
@@ -24,7 +24,7 @@ class FrontendEnqueue
 
         wp_enqueue_style(
             'autonova-main-style',
-            AUTONOVA_PLUGIN_URL . './assets/css/main.css',
+            AUTONOVA_PLUGIN_URL . 'assets/css/main.css',
             [],
             AUTONOVA_PLUGIN_VERSION,
             'all'
@@ -32,7 +32,7 @@ class FrontendEnqueue
 
         wp_enqueue_style(
             'autonova-theme-style',
-            AUTONOVA_PLUGIN_URL . './assets/css/theme.css',
+            AUTONOVA_PLUGIN_URL . 'assets/css/theme.css',
             [],
             AUTONOVA_PLUGIN_VERSION,
             'all'
@@ -40,7 +40,7 @@ class FrontendEnqueue
 
         wp_register_style(
             'autonova-team-member',
-            AUTONOVA_PLUGIN_URL . './assets/css/team-member.css',
+            AUTONOVA_PLUGIN_URL . 'assets/css/team-member.css',
             [],
             AUTONOVA_PLUGIN_VERSION,
             'all'
@@ -48,7 +48,7 @@ class FrontendEnqueue
 
         wp_register_style(
             'autonova-featue-car',
-            AUTONOVA_PLUGIN_URL . './assets/css/feature-car.css',
+            AUTONOVA_PLUGIN_URL . 'assets/css/feature-car.css',
             [],
             AUTONOVA_PLUGIN_VERSION,
             'all'
@@ -58,7 +58,7 @@ class FrontendEnqueue
         if (is_page('about-us')) {
             wp_enqueue_style(
                 'autonova-about-us-page-style',
-                AUTONOVA_PLUGIN_URL . './assets/css/about-us.css',
+                AUTONOVA_PLUGIN_URL . 'assets/css/about-us.css',
                 [],
                 AUTONOVA_PLUGIN_VERSION,
                 'all'
@@ -68,7 +68,17 @@ class FrontendEnqueue
         if (is_page('services')) {
             wp_enqueue_style(
                 'autonova-services-page-style',
-                AUTONOVA_PLUGIN_URL . './assets/css/services.css',
+                AUTONOVA_PLUGIN_URL . 'assets/css/services.css',
+                [],
+                AUTONOVA_PLUGIN_VERSION,
+                'all'
+            );
+        }
+
+        if (is_singular('car')) {
+            wp_enqueue_style(
+                'autonova-single-car-style',
+                AUTONOVA_PLUGIN_URL . 'assets/css/single-car.css',
                 [],
                 AUTONOVA_PLUGIN_VERSION,
                 'all'

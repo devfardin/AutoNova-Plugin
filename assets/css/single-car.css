@@ -1,0 +1,25 @@
+.single-car__breadcrumb {
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    border-bottom: 1px solid #ffffff1e !important;
+    padding-bottom: 10px;
+}
+
+.single-car__breadcrumb span {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    color: #a0a0a0;
+}
+
+.single-car__breadcrumb span a {
+    color: #a0a0a0;
+    text-decoration: none;
+}
+.single-car__breadcrumb span:last-child {
+    color: #ffffff;
+
+}
