@@ -35,6 +35,7 @@ class FeatureCars
                         $car_status = get_the_terms(get_the_ID(), 'car_status');
                         $price = get_post_meta(get_the_ID(), 'car_sale_price', true);
                         $price = str_replace(['$', ',', ' ', 'USD'], '', $price);
+                        $mileage_unit = get_post_meta(get_the_ID(), 'car_mileage_unit', true);
                         ?>
                         <div class="feature-car__card">
                             <a class="feature-car__thumb" href="<?php the_permalink(); ?>">
@@ -71,7 +72,7 @@ class FeatureCars
                                                     d="M7.5 8.33337L1.73584 12.1761C1.59224 12.2719 1.39822 12.2331 1.30248 12.0895C1.26826 12.0381 1.25 11.9778 1.25 11.9161V3.08395C1.25 2.91136 1.38991 2.77145 1.5625 2.77145C1.62419 2.77145 1.68451 2.78972 1.73584 2.82394L7.5 6.66669V3.08395C7.5 2.91136 7.63994 2.77145 7.8125 2.77145C7.87419 2.77145 7.9345 2.78972 7.98588 2.82394L14.61 7.24C14.7536 7.33575 14.7924 7.52981 14.6966 7.67337C14.6738 7.70769 14.6443 7.73718 14.61 7.76006L7.98588 12.1761C7.84225 12.2719 7.64825 12.2331 7.5525 12.0895C7.51825 12.0381 7.5 11.9778 7.5 11.9161V8.33337ZM6.4965 7.50006L2.5 4.83569V10.1644L6.4965 7.50006ZM8.75 4.83569V10.1644L12.7465 7.50006L8.75 4.83569Z"
                                                     fill="#ED7D37" />
                                             </svg>
-                                            <?php echo esc_html($mileage); ?> km</span>
+                                            <?php echo esc_html($mileage); ?> <?php echo $mileage_unit ?></span>
                                     <?php endif; ?>
                                     <?php if ($fuel): ?>
                                         <span>

@@ -24,7 +24,20 @@
     color: #ffffff;
 }
 
+/* Hero container  */
+.single-car__hero {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
 
+@media only screen and (min-width:1024px) {
+    .single-car__hero {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
 
 /* ── Gallery ─────────────────────────────────────────── */
@@ -116,6 +129,7 @@
     overflow-x: auto;
     padding-bottom: 4px;
     scrollbar-width: none;
+    flex-wrap: wrap;
 }
 
 .car-gallery__thumbs::-webkit-scrollbar {
@@ -124,8 +138,9 @@
 
 .car-gallery__thumb {
     flex-shrink: 0;
-    width: 96px;
-    height: 64px;
+    width: 65px;
+    height: 45px;
+    object-fit: cover;
     overflow: hidden;
     border: 2px solid transparent;
     border-radius: 3px;
@@ -133,6 +148,13 @@
     background: none;
     cursor: pointer;
     transition: border-color 0.25s ease;
+}
+
+@media only screen and (min-width:576px) {
+    .car-gallery__thumb {
+        width: 96px;
+        height: 64px;
+    }
 }
 
 .car-gallery__thumb img {
@@ -233,7 +255,6 @@
 
 .car-lightbox__close:hover {
     border-color: #ED7D37;
-    /* background: tra; */
 }
 
 .car-lightbox__arrow {
@@ -304,4 +325,217 @@
     letter-spacing: 0.1em;
     padding: 0.5rem 1rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* right side */
+
+.single-car__hero_info_wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.single-car__badge {
+    background: #ed7d37;
+    color: #000;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 4px 12px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.single-car__title {
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: 900;
+    margin-bottom: 8px;
+    line-height: 1.1em;
+}
+
+@media only screen and (min-width:768px) {
+    .single-car__title {
+        color: #ffffff;
+        font-size: 48px;
+    }
+}
+
+.single-car__year_color {
+    font-size: 15px;
+    color: #A0A0A0;
+    display: flex;
+    align-items: center;
+}
+
+.single-car__price_wrap {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.single-car__price {
+    font-size: 35px;
+    color: var(--e-global-color-primary);
+    font-weight: 900;
+    line-height: 1.1em;
+}
+
+@media only screen and (min-width: 768px) {
+    .single-car__price {
+        font-size: 48px;
+    }
+}
+
+.single-car__carrency {
+    font-size: 14px;
+    color: #A0A0A0;
+}
+
+.single-car__meta_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+@media only screen and (min-width: 640px) {
+    .single-car__meta_grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.single-car__meta_card {
+    background: #141414;
+    border: 1px solid #ffffff0d;
+    padding: 16px;
+    display: flex;
+    gap: 4px;
+    flex-direction: column;
+}
+
+.single-car__meta_card .meta_title {
+    font-size: 12px;
+    color: #A0A0A0;
+    letter-spacing: .1em;
+}
+
+.single-car__meta_card .meta_des {
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.single-car__desc p {
+    font-size: 18px;
+    color: rgb(160 160 160);
+    line-height: 1.7rem;
+}
+
+.single-car__buttons {
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+@media only screen and (min-width:576px) {
+    .single-car__buttons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.single-car__query_btn {
+    width: 100%;
+    background-color: #ed7d37;
+    color: #000000;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.15em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: 1px solid var(--e-global-color-primary);
+    padding: 14px;
+}
+
+@media only screen and (min-width:576px) {
+    .single-car__query_btn {
+        padding: 18px;
+    }
+}
+
+.single-car__query_btn:hover {
+    background-color: #ff9a5c;
+    color: #000000;
+}
+
+.single-car__whatsapp {
+    white-space: nowrap;
+    flex: 1;
+    border: 1px solid rgba(37, 211, 102, 0.4);
+    background-color: transparent;
+    color: #25D366;
+    font-size: 15px;
+    letter-spacing: 0.15em;
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+@media only screen and (min-width:576px) {
+    .single-car__whatsapp {
+        padding: 18px;
+    }
+}
+
+.single-car__whatsapp svg {
+    transition: all 0.3s ease;
+}
+
+.single-car__whatsapp:hover svg {
+    fill: white !important;
+    transition: all 0.3s ease;
+}
+
+.single-car__whatsapp:hover {
+    background-color: #25D366;
+    color: #ffffff;
+}
+
+.single-car__meta_flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    margin-top: 10px;
+}
+.dot_divider{
+    width: 4px;
+    height: 4px;
+    border-radius: 100px;
+    background: #ffffff33;
+    display: block;
+}
+.single-car__meta_flex_card {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    color: #A0A0A0;
+    font-size: 14px;
+    font-weight: 400;
+}
+.single-car__meta_flex_card svg{
+    width: 13px !important;
+    height: 13px !important;
 }

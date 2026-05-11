@@ -89,7 +89,7 @@ class FrontendEnqueue
                 [],
                 AUTONOVA_PLUGIN_VERSION,
                 true
-            );
+            );  
         }
 
 
