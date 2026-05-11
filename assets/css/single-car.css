@@ -516,9 +516,14 @@
 .single-car__meta_flex {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 10px;
     align-items: center;
     margin-top: 10px;
+}
+@media only screen and (min-width: 576px){
+    .single-car__meta_flex {
+        gap: 15px;
+    }
 }
 .dot_divider{
     width: 4px;
@@ -538,4 +543,16 @@
 .single-car__meta_flex_card svg{
     width: 13px !important;
     height: 13px !important;
+}
+
+/* Features Section __________________________ */
+.single-car__feature_conntainer{
+    background: #111111;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-color: #ffffff0d;
+    padding: 60px 0;
+}
+.single-car__feature_subheading{
+    justify-content: center;
 }
