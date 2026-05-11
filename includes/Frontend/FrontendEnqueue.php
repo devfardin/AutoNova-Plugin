@@ -83,6 +83,13 @@ class FrontendEnqueue
                 AUTONOVA_PLUGIN_VERSION,
                 'all'
             );
+            wp_enqueue_script(
+                'autonova-car-gallery',
+                AUTONOVA_PLUGIN_URL . 'assets/js/car-gallery.js',
+                [],
+                AUTONOVA_PLUGIN_VERSION,
+                true
+            );
         }
 
 
