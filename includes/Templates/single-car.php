@@ -1,6 +1,7 @@
 <?php
 
 use Fardin\Autonova\Templates\LightBox;
+use Fardin\Autonova\Templates\RelatedCar;
 
 if (!defined('ABSPATH')) {
     exit;
@@ -53,6 +54,8 @@ $price = is_numeric(str_replace(['$', ',', ' ', $currency], '', $price))
     : 0;
 $mileage_unit = get_post_meta(get_the_ID(), 'car_mileage_unit', true);
 $fuel_economy = get_post_meta(get_the_ID(), 'car_fuel_economy', true);
+
+$car_features = get_post_meta(get_the_ID(), 'car_features', true);
 
 
 $car_mata = array(
@@ -269,21 +272,60 @@ $car_mata = array(
 
     </div>
 
-    <!-- Feature Section  -->
+    <!-- Feature Section start -->
     <div class="single-car__feature_conntainer">
         <div class="autonova-container">
-           <div class="single-car__heading_subheading">
-             <div class="sub-heading-wrapper single-car__feature_subheading">
-                <span class="divider"></span>
-                <p class="custom-page-subtitle"> EQUIPMENT </p>
-                <span class="divider"></span>
+            <div class="single-car__heading_container">
+                <div class="sub-heading-wrapper single-car__feature_subheading">
+                    <span class="divider"></span>
+                    <p class="custom-page-subtitle"> EQUIPMENT </p>
+                    <span class="divider"></span>
+                </div>
+                <h1 class="single-car__heading">FEATURES & OPTIONS</h1>
             </div>
-            <h1>FEATURES & OPTIONS</h1>
-           </div>
+            <!-- get all feature -->
+            <?php if (have_rows('car_features')): ?>
+                <div class="single-car__features">
+                    <?php while (have_rows('car_features')):
+                        the_row(); ?>
+                        <?php if (get_sub_field('option')): ?>
+                            <div class="single-car__feature">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="#ED7D37" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.707 7.293a1 1 0 0 0-1.414 0L10.5 14.086l-1.793-1.793a1 1 0 0 0-1.414 1.414l2.5 2.5a1 1 0 0 0 1.414 0l5.5-5.5a1 1 0 0 0 0-1.414z" />
+                                </svg>
+                                <span class="single-car__option">
+                                    <?php the_sub_field('option'); ?>
+                                </span>
+                            </div>
+                        <?php endif; ?>
+                    <?php endwhile; ?>
+                </div>
+            <?php endif; ?>
 
         </div>
 
     </div>
+    <!-- Feature Section  End-->
+
+    <!-- Similar Vehicles Start -->
+    <div class="single-car__similar_conntainer">
+        <div class="autonova-container">
+            <div class="single-car__heading_container">
+                <div class="sub-heading-wrapper single-car__feature_subheading">
+                    <span class="divider"></span>
+                    <p class="custom-page-subtitle"> YOU MAY ALSO LIKE </p>
+                    <span class="divider"></span>
+                </div>
+                <h1 class="single-car__heading">SIMILAR VEHICLES</h1>
+            </div>
+            <div>
+                <?php RelatedCar::instance()->relatedcar($post->ID, 4) ?>
+            </div>
+        </div>
+    </div>
+    <!-- Similar Vehicles end -->
+
 
     <!-- Lightbox Call-->
     <?php LightBox::instance()->lightbox($total) ?>

@@ -96,6 +96,9 @@
 .feature-car__info {
     padding: 24px;
 }
+.feature-car__info a{
+    text-decoration: none;
+}
 
 .feature-car__title {
     color: #fff;
@@ -204,12 +207,9 @@
     top: 63px;
     z-index: 40;
     background-color: rgba(10, 10, 10, 0.95);
-    /* bg-[#0A0A0A]/95 */
     backdrop-filter: blur(12px);
-    /* backdrop-blur-md */
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 2px solid rgba(237, 125, 55, 0.3);
-    /* border-[#ed7d37]/30 */
 }
 
 @media only screen and (min-width:768px) {
@@ -333,4 +333,23 @@
 .feature-cars__empty-reset:hover {
     background: var(--e-global-color-primary);
     color: #000000;
+}
+
+.no_car_found_message_wrap {
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    padding:30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    gap: 2px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.no_car_found_message {
+    color: #ffffff;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    text-align: center;
 }
