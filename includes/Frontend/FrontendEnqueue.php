@@ -91,6 +91,12 @@ class FrontendEnqueue
                 true
             );  
         }
+         wp_register_style(
+            'autonova-footer',
+            AUTONOVA_PLUGIN_URL . 'assets/css/footer.css',
+            [],
+            AUTONOVA_PLUGIN_VERSION
+        );
 
 
 

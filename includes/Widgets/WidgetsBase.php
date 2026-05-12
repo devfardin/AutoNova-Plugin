@@ -24,6 +24,7 @@ class WidgetsBase
         $widgets_manager->register(WhatsappBtn::instance());
         $widgets_manager->register(Faq::instance());
         $widgets_manager->register(TextDivider::instance());
+        $widgets_manager->register(HeroSlider::instance());
     }
     public function register_scripts()
     {
@@ -35,6 +36,9 @@ class WidgetsBase
     public function enqueue_scripts()
     {
         wp_register_style('autonova_whatsapp', AUTONOVA_PLUGIN_URL . 'assets/css/whatsappBtn.css', array(), AUTONOVA_PLUGIN_VERSION, 'all');
+
+        wp_enqueue_style('autonova_hero_slider', AUTONOVA_PLUGIN_URL . 'assets/css/hero-slider.css', [], AUTONOVA_PLUGIN_VERSION, 'all');
+        wp_enqueue_script('autonova_hero_slider', AUTONOVA_PLUGIN_URL . 'assets/js/hero-slider.js', [], AUTONOVA_PLUGIN_VERSION, true);
 
        wp_register_style(
             'autonova_faq',
