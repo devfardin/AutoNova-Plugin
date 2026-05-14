@@ -1,0 +1,72 @@
+/* Other styles come from Feature-car.css */
+.car-inventory_wraper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+.feature-car__color_wrap .feature-car__color {
+    font-size: 15px;
+    color: #A0A0A0;
+    display: flex;
+    align-items: center;
+    margin-top: 3px;
+}
+
+.feature-car__meta_box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    color: #A0A0A0;
+    font-size: 12px;
+    margin-bottom: 16px;
+    margin-top: 16px;
+}
+
+.feature-car__meta_box span {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    background: #0000004d;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.feature-car__meta_flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    color: #A0A0A0;
+    font-size: 12px;
+    margin-bottom: 16px;
+    margin-top: 16px;
+}
+
+.feature-car__engine_meta_wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+    background: #0000004d;
+    padding: 12px;
+    width: 100%;
+}
+
+.feature-car__engine_meta_wrap h6 {
+    font-size: 12px;
+    font-weight: 400;
+    color: #A0A0A0;
+    margin-bottom: 0;
+}
+
+.feature-car__engine_meta_wrap .feature-car__engine_meta {
+    font-size: 12px;
+    font-weight: 600;
+    color: #ffffff;
+}

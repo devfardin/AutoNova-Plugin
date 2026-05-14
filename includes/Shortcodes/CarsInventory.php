@@ -7,6 +7,7 @@ class CarsInventory
 {
     use \Fardin\Autonova\App\Traits\Singletion;
 
+
     public function init()
     {
         add_shortcode('cars_inventory', [$this, 'rander_cars_inventory']);
@@ -90,11 +91,17 @@ class CarsInventory
 
     private function render_card(): string
     {
+        wp_enqueue_style('autonova-cars-inventory');
         $year = get_post_meta(get_the_ID(), 'car_year', true);
         $mileage = get_post_meta(get_the_ID(), 'car_mileage', true);
         $fuel = get_the_terms(get_the_ID(), 'car_fuel_type');
         $car_status = get_the_terms(get_the_ID(), 'car_status');
         $price = get_post_meta(get_the_ID(), 'car_sale_price', true);
+        $car_color = get_the_terms(get_the_ID(), 'car_color');
+        $transmission = get_post_meta(get_the_ID(), 'car_transmission', true);
+        $engine = get_post_meta(get_the_ID(), 'car_engine', true);
+        $ph = get_post_meta(get_the_ID(), 'car_horsepower', true);
+        $car_desc = get_post_meta(get_the_ID(), 'car_description', true);
         $price = is_numeric(str_replace(['$', ',', ' ', 'USD'], '', $price))
             ? (int) str_replace(['$', ',', ' ', 'USD'], '', $price)
             : 0;
@@ -114,7 +121,13 @@ class CarsInventory
                 <a href="<?php the_permalink(); ?>">
                     <h3 class="feature-car__title"><?php the_title(); ?></h3>
                 </a>
-                <div class="feature-car__meta">
+                <div class="feature-car__color_wrap">
+                    <span class="feature-car__color">
+                        <?php echo esc_html($car_color[0]->name . ' · ' . $transmission); ?>
+                    </span>
+                </div>
+                <!-- Car info -->
+                <div class="feature-car__meta_box">
                     <?php if ($year): ?>
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
@@ -145,6 +158,25 @@ class CarsInventory
                             <?php echo esc_html($fuel[0]->name); ?>
                         </span>
                     <?php endif; ?>
+                </div>
+                <div class="feature-car__meta_flex">
+                    <?php if ($engine) ?>
+                    <div class="feature-car__engine_meta_wrap">
+                        <h6>
+                            ENGINE
+                        </h6>
+                        <span class="feature-car__engine_meta">
+                            <?php echo esc_html(substr($engine, 0, 4)); ?>
+                        </span>
+                    </div>
+                    <div class="feature-car__engine_meta_wrap">
+                        <h6>
+                            HP
+                        </h6>
+                        <span class="feature-car__engine_meta">
+                            <?php echo esc_html(strstr($ph, ' ', true)); ?>
+                        </span>
+                    </div>
                 </div>
                 <div class="feature-car__divider"></div>
                 <div class="feature-car__footer">

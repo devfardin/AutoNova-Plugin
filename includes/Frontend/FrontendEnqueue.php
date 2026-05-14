@@ -97,6 +97,13 @@ class FrontendEnqueue
             [],
             AUTONOVA_PLUGIN_VERSION
         );
+        
+        wp_register_style(
+            'autonova-cars-inventory',
+            AUTONOVA_PLUGIN_URL . 'assets/css/cars-inventory.css',
+            [],
+            AUTONOVA_PLUGIN_VERSION
+        );
 
 
 
