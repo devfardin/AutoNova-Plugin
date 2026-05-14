@@ -193,7 +193,12 @@ button.ff-btn.ff-btn-submit.ff-btn-md:hover {
     font-size: 16px;
     text-align: center;
 }
-
+#fluentform_3_success {
+    border: 1px solid var(--e-global-color-primary-hover);
+    color: white;
+    font-size: 16px;
+    text-align: center;
+}
 /* Text Divider Widget */
 .autonova_divider_container {
     display: flex;
