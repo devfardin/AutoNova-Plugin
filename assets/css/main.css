@@ -193,6 +193,7 @@ button.ff-btn.ff-btn-submit.ff-btn-md:hover {
     font-size: 16px;
     text-align: center;
 }
+
 #fluentform_3_success {
     border: 1px solid var(--e-global-color-primary-hover);
     color: white;
@@ -227,6 +228,7 @@ button.ff-btn.ff-btn-submit.ff-btn-md:hover {
     backdrop-filter: blur(4px);
     transition: all 500ms;
 }
+
 .elementor-image-box-wrapper {
     display: flex;
     gap: 20px
@@ -236,4 +238,13 @@ button.ff-btn.ff-btn-submit.ff-btn-md:hover {
 
 .Our_core_values .elementor-element:hover .elementor-icon {
     border-color: var(--e-global-color-primary) !important;
+}
+
+.elementor-button{
+    transition: all 0.5s;
+}
+
+.elementor-button:hover span svg {
+    transform: translateX(4px);
+    transition-duration: .15s;
 }
