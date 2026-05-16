@@ -101,12 +101,11 @@ class CarsInventory
         $transmission = get_post_meta(get_the_ID(), 'car_transmission', true);
         $engine = get_post_meta(get_the_ID(), 'car_engine', true);
         $ph = get_post_meta(get_the_ID(), 'car_horsepower', true);
-        $car_desc = get_post_meta(get_the_ID(), 'car_description', true);
         $price = is_numeric(str_replace(['$', ',', ' ', 'USD'], '', $price))
             ? (int) str_replace(['$', ',', ' ', 'USD'], '', $price)
             : 0;
         ob_start(); ?>
-        <div class="feature-car__card">
+        <div class="feature-car__card fade-up">
             <a class="feature-car__thumb" href="<?php the_permalink(); ?>">
                 <?php if (has_post_thumbnail()): ?>
                     <?php the_post_thumbnail('large', ['class' => 'feature-car__img']); ?>

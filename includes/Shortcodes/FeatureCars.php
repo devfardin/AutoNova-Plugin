@@ -95,7 +95,7 @@ class FeatureCars
                     wp_reset_postdata(); ?>
                 </div>
                 <div class="feature-cars__cta">
-                    <a href="<?php echo esc_url(site_url('/inventory')); ?>">
+                    <a class="fade-up" href="<?php echo esc_url(site_url('/inventory')); ?>">
                         VIEW ALL VEHICLES
                         <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
                             <path

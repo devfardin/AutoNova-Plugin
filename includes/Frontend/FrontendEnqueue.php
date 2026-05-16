@@ -104,6 +104,35 @@ class FrontendEnqueue
             [],
             AUTONOVA_PLUGIN_VERSION
         );
+       
+        wp_enqueue_script(
+            'autonova-animation-script',
+            '//cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js',
+            [],
+            AUTONOVA_PLUGIN_VERSION,
+            true
+        );
+        wp_enqueue_script(
+            'autonova-scrolltrigger-script',
+            '//cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js',
+            ['autonova-animation-script'],
+            AUTONOVA_PLUGIN_VERSION,
+            true
+        );
+        wp_enqueue_script(
+            'autonova-main-script',
+            AUTONOVA_PLUGIN_URL . 'assets/js/main.js',
+            ['autonova-animation-script', 'autonova-scrolltrigger-script'],
+            AUTONOVA_PLUGIN_VERSION,
+            true
+        );
+        wp_enqueue_style(
+            'autonova-animation-style',
+            AUTONOVA_PLUGIN_URL . 'assets/css/animation.css',
+            [],
+            AUTONOVA_PLUGIN_VERSION,
+            'all'
+        );
 
 
 

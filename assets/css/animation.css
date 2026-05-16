@@ -1,0 +1,9 @@
+/* ── Utility animation classes ── */
+/* Initial states are set by GSAP via gsap.set() — no CSS conflicts */
+
+.fade-up,
+.fade-left,
+.fade-right,
+.scale-in {
+    will-change: transform, opacity;
+}
